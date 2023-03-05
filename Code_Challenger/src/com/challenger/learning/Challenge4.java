@@ -32,7 +32,11 @@ public class Challenge4 {
 //		System.out.println("Enter a Roman number : ");
 //		String input = reader.next();
 		char[] pattern_arr = {}, match_pattern_arr = new char[20];
-		String[] strs = { "flower", "flow", "flight" };
+		int matching_pattern_length = 0;
+		
+//		String[] strs = { "flower", "flow", "flight" };
+		
+		String[] strs = {"dog","racecar","car"};
 
 		System.out.println("Input is ::" + strs.toString());
 
@@ -55,6 +59,7 @@ public class Challenge4 {
 				System.out.println(str.charAt(i));
 				if (str.charAt(i) != pattern_arr[i]) {
 					broken = true;
+					matching_pattern_length = i;
 					match_pattern_arr[i] = '\0';
 					break;
 				}
@@ -64,7 +69,7 @@ public class Challenge4 {
 				break;
 		}
 
-		System.out.println("Matching pattern is " + String.valueOf(match_pattern_arr));
+		System.out.println("Matching pattern is " + String.valueOf(match_pattern_arr).substring(0, matching_pattern_length));
 	}
 
 }
