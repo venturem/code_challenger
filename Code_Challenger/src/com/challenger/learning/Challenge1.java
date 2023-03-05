@@ -25,11 +25,11 @@ public class Challenge1 {
 				int inner_sum = outer_sum - input1[j];
 				
 				if ( inner_sum == 0) 
-					System.out.println("Index of input array is x:" + i + " y: " + j);
+					System.out.println("Index of input array is Array[" + i + "]->" + input1[i] +""+" + Array[" + j+ "]->" + input1[j] + "");
 			}
 		}
 
-		System.out.println("You entered : |" + "" + "|");
+		//System.out.println("You entered : |" + "" + "|");
 		
 		
 	}
