@@ -42,17 +42,20 @@ public class Challenge4 {
 
 		String pattern = "";
 		int minlength = strs[0].length();
+		pattern_arr = strs[0].toCharArray();
 
 		for (String str : strs) {
 			if (minlength > str.length()) {
 				minlength = str.length();
 
 				pattern_arr = str.toCharArray();
+				System.out.println("Pattern is " + String.valueOf(pattern_arr));
 			}
 		}
 
 		boolean broken = false;
 		System.out.println("Min Length is " + minlength);
+		System.out.println("Pattern is " + String.valueOf(pattern_arr));
 
 		for (String str : strs) {
 			for (int i = 0; i < minlength; i++) {
